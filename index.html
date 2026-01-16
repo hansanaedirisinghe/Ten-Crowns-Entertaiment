@@ -325,6 +325,38 @@
       transform: translateY(-8px);
       box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
       border-color: #d4af37;
+    }/* --- VISION & MISSION --- */
+    .vision-mission-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 60px;
+    }
+    .vm-card {
+      padding: 30px;
+      border-left: 3px solid #d4af37;
+      background: rgba(212, 175, 55, 0.05);
+      transition: 0.3s;
+    }
+    .vm-card:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+    .vm-card h3 {
+      font-family: 'Playfair Display', serif;
+      color: #d4af37;
+      font-size: 28px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .vm-card p {
+      margin-top: 0;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .vision-mission-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -378,7 +410,21 @@
         we merge modern technology with the grandeur of our heritage. We don’t just tell stories, we rule 
         the screen with the spirit of a king.
       </p>
-    </div>
+    </div><div class="vision-mission-container reveal">
+  <div class="vm-card">
+    <h3>Our Vision</h3>
+    <p>
+      To be the ultimate throne of cinematic brilliance, where legendary heritage meets futuristic storytelling, redefining the standards of global filmmaking from the heart of our nation.
+    </p>
+  </div>
+
+  <div class="vm-card">
+    <h3>Our Mission</h3>
+    <p>
+      To craft regal visual experiences by mastering the ten essential perspectives of creativity. We are committed to empowering stories with profound wisdom, unmatched precision, and the spirit of a king.
+    </p>
+  </div>
+</div>
   </div>
 </section>
 <section id="services">
@@ -521,4 +567,5 @@
 </script>
 
 </body>
+
 </html>
