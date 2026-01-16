@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>TEN CROWNS ENTERTAINMENT | Cinematic Excellence</title>
+  
+  <link rel="icon" type="image/png" href="sources/images/logo/Ten Crowns Entertainment Logo (Transparent).png">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
   <script src="https://unpkg.com/scrollreveal"></script>
 
@@ -28,7 +32,7 @@
       background: rgba(0,0,0,0); z-index: 1000; transition: 0.5s;
     }
     header.scrolled { background: rgba(0,0,0,0.9); padding: 15px 60px; border-bottom: 1px solid rgba(212,175,55,0.2); }
-    .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; letter-spacing: 2px; }
+    .logo img { height: 80px; width: auto; object-fit: contain; }
     nav a { color: #d4af37; text-decoration: none; margin-left: 35px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; transition: 0.3s; }
     nav a:hover { opacity: 0.7; }
 
@@ -41,322 +45,69 @@
       position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
       background: radial-gradient(circle, #111 0%, #000 100%);
     }
-
     .hero-content h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 8vw, 75px); line-height: 1.1; margin-bottom: 15px; }
     .hero-content p { font-size: 14px; letter-spacing: 5px; text-transform: uppercase; opacity: 0.8; }
 
     /* --- SECTIONS --- */
     section { padding: 120px 10%; position: relative; }
-    section p {
-      max-width: 700px;
-      line-height: 1.8;
-      font-size: 15px;
-      color: #e0e0e0;
-      margin-top: 20px;
-    }
     h2 { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 40px; }
+    section p { max-width: 700px; line-height: 1.8; font-size: 15px; color: #e0e0e0; margin-top: 20px; }
 
-    /* --- TEAM SECTION STYLE --- */
-    .team-grid {
-      display: flex;
-      justify-content: center;
-      gap: 80px;
-      margin-top: 60px;
-      flex-wrap: wrap;
-    }
-    .team-card {
-      max-width: 300px;
-      text-align: center;
-      transition: 0.4s;
-    }
-    .member-image {
-      width: 220px;
-      height: 220px;
-      border-radius: 15px; 
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      margin: 0 auto 25px;
-      overflow: hidden;
-      transition: 0.6s ease;
-    }
-    .team-card:hover .member-image {
-      border-color: #d4af37;
-      transform: scale(1.05);
-      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-    }
-    .member-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .team-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-    .team-card p.role {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #d4af37;
-      font-weight: 600;
-    }
-
-    /* --- PRODUCTIONS SLIDER --- */
-    .slider-container {
-      display: flex; overflow-x: auto; gap: 30px; padding-bottom: 20px;
-      scrollbar-width: none;
-    }
-    .slider-container::-webkit-scrollbar { display: none; }
+    /* --- ABOUT & VM --- */
+    .about-content { display: flex; align-items: center; gap: 50px; margin-top: 30px; }
+    .about-logo { flex: 1; max-width: 300px; }
+    .about-logo img { width: 100%; height: auto; filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.2)); }
+    .about-text { flex: 2; }
     
-    .slide-card {
-      min-width: 400px; height: 500px; background: #0a0a0a;
-      border: 1px solid rgba(212,175,55,0.1);
-      display: flex; align-items: flex-end; padding: 30px;
-      position: relative; transition: 0.5s; cursor: pointer;
-    }
-    .slide-card:hover { border-color: #d4af37; transform: scale(1.02); }
-    .slide-card span { font-family: 'Playfair Display', serif; font-size: 22px; z-index: 2; }
+    .vm-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 80px; }
+    .vm-box { padding: 40px; background: #0a0a0a; border: 1px solid rgba(212, 175, 55, 0.1); position: relative; transition: 0.5s; }
+    .vm-box:hover { border-color: #d4af37; transform: translateY(-10px); }
+    .vm-box h3 { font-family: 'Playfair Display', serif; color: #d4af37; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
 
-    /* --- CONTACT FORM --- */
+    /* --- SERVICES --- */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+    .service-card { padding: 40px; background: #050505; border: 1px solid rgba(212, 175, 55, 0.1); transition: 0.4s; position: relative; }
+    .service-card:hover { border-color: #d4af37; transform: translateY(-10px); }
+    .service-number { position: absolute; top: 20px; right: 20px; font-size: 40px; color: rgba(212, 175, 55, 0.05); font-family: 'Playfair Display', serif; }
+
+    /* --- TEAM --- */
+    .team-grid { display: flex; justify-content: center; gap: 80px; margin-top: 60px; flex-wrap: wrap; }
+    .team-card { max-width: 300px; text-align: center; }
+    .member-image { width: 220px; height: 220px; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.2); margin: 0 auto 25px; overflow: hidden; transition: 0.6s; }
+    .member-image img { width: 100%; height: 100%; object-fit: cover; }
+    .team-card:hover .member-image { border-color: #d4af37; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4); }
+    .portfolio-link { display: inline-block; margin-top: 15px; font-size: 11px; color: #d4af37; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(212, 175, 55, 0.4); padding: 8px 15px; transition: 0.3s; }
+    .portfolio-link:hover { background: #d4af37; color: #000; }
+
+    /* --- PRODUCTIONS --- */
+    .featured-work { width: 100%; max-width: 900px; margin: 0 auto; border: 1px solid rgba(212, 175, 55, 0.3); background: #0a0a0a; overflow: hidden; }
+    .work-poster { width: 100%; height: 500px; position: relative; }
+    .work-poster img { width: 100%; height: 100%; object-fit: cover; }
+    .status-badge { position: absolute; top: 20px; right: 20px; background: #d4af37; color: #000; padding: 5px 15px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+    .work-info { padding: 40px; text-align: left; }
+    .movie-links { display: flex; gap: 20px; margin-top: 20px; }
+    .db-link { height: 25px; opacity: 0.8; transition: 0.3s; }
+    .db-link:hover { opacity: 1; transform: scale(1.1); }
+
+    /* --- CONTACT --- */
     .contact-container { max-width: 700px; margin: 0 auto; }
-    .form-group { margin-bottom: 25px; text-align: left; }
-    input, textarea {
-      width: 100%; padding: 15px; background: transparent;
-      border: none; border-bottom: 1px solid rgba(212,175,55,0.4);
-      color: #fff; font-family: 'Inter', sans-serif; outline: none; transition: 0.4s;
-    }
+    .form-group { margin-bottom: 25px; }
+    input, textarea { width: 100%; padding: 15px; background: transparent; border: none; border-bottom: 1px solid rgba(212,175,55,0.4); color: #fff; outline: none; transition: 0.4s; }
     input:focus, textarea:focus { border-bottom-color: #ffd700; background: rgba(212,175,55,0.05); }
-
-    .btn {
-      padding: 15px 45px; border: 1px solid #d4af37; background: transparent;
-      color: #d4af37; letter-spacing: 2px; text-transform: uppercase;
-      font-size: 12px; cursor: pointer; transition: 0.5s; margin-top: 20px;
-    }
+    .btn { padding: 15px 45px; border: 1px solid #d4af37; background: transparent; color: #d4af37; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: 0.5s; }
     .btn:hover { background: #d4af37; color: #000; box-shadow: 0 0 30px rgba(212,175,55,0.3); }
 
-    footer { padding: 80px; text-align: center; font-size: 11px; opacity: 0.5; letter-spacing: 2px; }
+    /* --- FOOTER & SOCIALS --- */
+    footer { padding: 60px 20px; text-align: center; border-top: 1px solid rgba(212,175,55,0.1); }
+    .social-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
+    .social-links a { color: #d4af37; font-size: 22px; width: 50px; height: 50px; line-height: 50px; border: 1px solid rgba(212,175,55,0.2); border-radius: 50%; transition: 0.4s; }
+    .social-links a:hover { background: #d4af37; color: #000; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(212,175,55,0.3); }
 
-    @media(max-width: 768px) {
+    @media(max-width: 900px) {
       header { padding: 20px; }
       nav { display: none; }
-      .slide-card { min-width: 300px; height: 400px; }
-    }.portfolio-link {
-      display: inline-block;
-      margin-top: 15px;
-      font-size: 11px;
-      color: #d4af37;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      padding: 8px 15px;
-      transition: 0.3s;
-    }
-
-    .portfolio-link:hover {
-      background: #d4af37;
-      color: #000;
-      box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-    }/* --- ABOUT SECTION ENHANCEMENT --- */
-    .about-content {
-      display: flex;
-      align-items: center; /* මැදට සමපාත කිරීමට */
-      gap: 50px;
-      margin-top: 30px;
-    }
-    .about-logo {
-      flex: 1;
-      max-width: 300px; /* ලෝගෝ එකේ ප්‍රමාණය මෙතැනින් පාලනය කරන්න */
-    }
-    .about-logo img {
-      width: 100%;
-      height: auto;
-      filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.2)); /* ලෝගෝ එක වටා මඳ ආලෝකයක් */
-    }
-    .about-text {
-      flex: 2;
-    }
-    .about-text p {
-      max-width: 100%; /* කලින් තිබූ සීමාව ඉවත් කිරීම */
-      margin-bottom: 20px;
-    }
-
-    /* Mobile එකේදී එක යට එක පේන්න */
-    @media (max-width: 900px) {
-      .about-content {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about-logo {
-        max-width: 200px;
-        margin-bottom: 20px;
-      }
-    }/* --- UPDATED PRODUCTIONS SECTION --- */
-    .featured-work {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      background: #0a0a0a;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .work-poster {
-      width: 100%;
-      height: 500px;
-      background: linear-gradient(to bottom, transparent, #000), url('sources/images/productions/short-film-poster.jpg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-    .status-badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #d4af37;
-      color: #000;
-      padding: 5px 15px;
-      font-size: 11px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .work-info {
-      padding: 40px;
-      text-align: left;
-    }
-    .work-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    .work-info p {
-      max-width: 100%;
-      margin-top: 10px;
-      font-size: 14px;
-      color: #bbb;
-    }
-
-    @media (max-width: 768px) {
+      .about-content { flex-direction: column; text-align: center; }
       .work-poster { height: 300px; }
-    }.movie-links {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-      align-items: center;
-    }
-    .db-link {
-      height: 25px;
-      transition: 0.3s;
-      opacity: 0.8;
-    }
-    .db-link:hover {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-    .db-link img {
-      height: 100%;
-      width: auto;
-    }/* --- SERVICES SECTION --- */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-    .service-card {
-      padding: 40px;
-      background: #050505;
-      border: 1px solid rgba(212, 175, 55, 0.1);
-      text-align: left;
-      transition: 0.4s;
-      position: relative;
-    }
-    .service-card:hover {
-      border-color: #d4af37;
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
-    }
-    .service-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      margin-bottom: 15px;
-      color: #d4af37;
-    }
-    .service-card p {
-      font-size: 14px;
-      color: #aaa;
-      margin-top: 0;
-      line-height: 1.6;
-    }
-    .service-number {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 40px;
-      font-weight: 700;
-      color: rgba(212, 175, 55, 0.05);
-      font-family: 'Playfair Display', serif;
-    }/* --- ENHANCED SOCIAL MEDIA --- */
-    .social-links {
-      margin: 30px 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-    .social-links a {
-      color: #d4af37;
-      font-size: 24px; /* Icon එකේ ප්‍රමාණය විශාල කළා */
-      text-decoration: none;
-      transition: all 0.4s ease;
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      line-height: 50px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 50%;
-      text-align: center;
-    }
-    .social-links a:hover {
-      color: #fff;
-      background: #d4af37;
-      transform: translateY(-8px);
-      box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
-      border-color: #d4af37;
-    }/* --- VISION & MISSION --- */
-    .vision-mission-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      margin-top: 60px;
-    }
-    .vm-card {
-      padding: 30px;
-      border-left: 3px solid #d4af37;
-      background: rgba(212, 175, 55, 0.05);
-      transition: 0.3s;
-    }
-    .vm-card:hover {
-      background: rgba(212, 175, 55, 0.1);
-    }
-    .vm-card h3 {
-      font-family: 'Playfair Display', serif;
-      color: #d4af37;
-      font-size: 28px;
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    .vm-card p {
-      margin-top: 0;
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    @media (max-width: 768px) {
-      .vision-mission-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -365,7 +116,7 @@
 
 <header id="navbar">
   <div class="logo">
-    <img src="sources/images/logo/Ten Crowns Entertainment Logo (Transparent).png" alt="TEN CROWNS" style="height: 100px; width: auto; object-fit: contain;">
+    <img src="sources/images/logo/Ten Crowns Entertainment Logo (Transparent).png" alt="TEN CROWNS">
   </div>
   <nav>
     <a href="#">Home</a>
@@ -374,12 +125,12 @@
     <a href="#productions">Productions</a>
     <a href="#contact">Contact</a>
     <a href="https://hansana-edirisinghe.vercel.app/" target="_blank" style="border: 1px solid #d4af37; padding: 5px 10px;">Founder</a>
-  </nav><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </nav>
 </header>
 
 <section class="hero">
   <div class="video-container">
-    <video autoplay muted loop playsinline class="hero-video" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
       <source src="sources/videos/intro/Ten Crowns Entertainment Intro.mp4" type="video/mp4">
     </video>
   </div>
@@ -392,119 +143,87 @@
 
 <section id="about">
   <h2 class="gold-text reveal">Born From Legend</h2>
-  
   <div class="about-content">
     <div class="about-logo reveal">
       <img src="sources/images/logo/Ten Crowns Entertainment Logo (Transparent).png" alt="TEN CROWNS Logo">
     </div>
-
     <div class="about-text">
       <p class="reveal">
-        At <b>TEN CROWNS ENTERTAINMENT</b>, our identity is rooted in power, wisdom, and an ancient legacy. 
-        The 'Ten Crowns' represent the ten heads of the great <b>King Ravana</b>—a symbol of supreme intellect, 
-        mastery over the arts, and an unmatched vision that spanned across horizons.
+        At <b>TEN CROWNS ENTERTAINMENT</b>, our identity is rooted in power, wisdom, and an ancient legacy. The 'Ten Crowns' represent the ten heads of the great <b>King Ravana</b>—a symbol of supreme intellect and mastery over the arts.
       </p>
       <p class="reveal">
-        Just as the legend possessed ten different perspectives of wisdom, we approach cinema through ten 
-        essential lenses of creativity. Founded by <b>Hansana Edirisinghe</b> and <b>Sayodya Hasaranga</b>, 
-        we merge modern technology with the grandeur of our heritage. We don’t just tell stories, we rule 
-        the screen with the spirit of a king.
+        Founded by <b>Hansana Edirisinghe</b> and <b>Sayodya Hasaranga</b>, we merge modern technology with the grandeur of our heritage. We don’t just tell stories, we rule the screen with the spirit of a king.
       </p>
-    </div><div class="vision-mission-container reveal">
-  <div class="vm-card">
-    <h3>Our Vision</h3>
-    <p>
-      To be the ultimate throne of cinematic brilliance, where legendary heritage meets futuristic storytelling, redefining the standards of global filmmaking from the heart of our nation.
-    </p>
+    </div>
   </div>
 
-  <div class="vm-card">
-    <h3>Our Mission</h3>
-    <p>
-      To craft regal visual experiences by mastering the ten essential perspectives of creativity. We are committed to empowering stories with profound wisdom, unmatched precision, and the spirit of a king.
-    </p>
-  </div>
-</div>
+  <div class="vm-container">
+    <div class="vm-box reveal">
+      <h3>Our Vision</h3>
+      <p>To become a global beacon of cinematic mastery, where the ancient wisdom of our heritage inspires groundbreaking modern storytelling.</p>
+    </div>
+    <div class="vm-box reveal">
+      <h3>Our Mission</h3>
+      <p>To craft regal visual experiences through ten essential lenses of creativity, delivering technical precision and emotional depth in every frame.</p>
+    </div>
   </div>
 </section>
+
 <section id="services">
   <h2 class="gold-text reveal">Cinematic Mastery</h2>
   <div class="services-grid">
-    
     <div class="service-card reveal">
       <div class="service-number">01</div>
-      <h3>Cinematography & Direction</h3>
-      <p>Capturing every frame with royal precision. We specialize in visual storytelling that merges modern cinematic techniques with legendary aesthetics.</p>
+      <h3>Cinematography</h3>
+      <p>Capturing every frame with royal precision and legendary aesthetics.</p>
     </div>
-
     <div class="service-card reveal">
       <div class="service-number">02</div>
-      <h3>Script Writing & Storytelling</h3>
-      <p>Building strong foundations for greatness. Our scripts are crafted with deep emotional resonance and structured for international cinematic appeal.</p>
+      <h3>Script Writing</h3>
+      <p>Building strong foundations with deep emotional resonance.</p>
     </div>
-
     <div class="service-card reveal">
       <div class="service-number">03</div>
-      <h3>Post-Production & Editing</h3>
-      <p>The final crown. Our editing and color grading process ensures that every production achieves a high-end, world-class cinematic finish.</p>
+      <h3>Post-Production</h3>
+      <p>High-end editing and color grading for a world-class finish.</p>
     </div>
-
   </div>
 </section>
+
 <section id="team">
   <h2 class="gold-text reveal">The Minds Behind the Crown</h2>
   <div class="team-grid">
-    
-   <div class="team-card reveal">
-      <div class="member-image">
-        <img src="sources\images\Team\Hansana Edirisinghe\Hansana Edirisinghe Profile Picture.jpg" alt="Hansana Edirisinghe">
-      </div>
-      <h3>Hansana Edirisinghe</h3>
-      <p class="role">Founder & Director of Operations</p>
-      <p style="font-size: 13px; margin-top: 10px; color: #aaa;">Cinematography, Editing & Direction</p>
-      
-      <a href="https://hansana-edirisinghe.vercel.app/" target="_blank" class="portfolio-link">View Founder's Portfolio</a>
-    </div>
-
     <div class="team-card reveal">
       <div class="member-image">
-        <img src="sources\images\Team\Sayodya Hasaranga\Sayodya Hasaranga Profile Picture.jpg" alt="Sayodya Hasaranga">
+        <img src="sources/images/Team/Hansana Edirisinghe/Hansana Edirisinghe Profile Picture.jpg" alt="Hansana">
+      </div>
+      <h3>Hansana Edirisinghe</h3>
+      <p class="role">Founder & Director</p>
+      <a href="https://hansana-edirisinghe.vercel.app/" target="_blank" class="portfolio-link">Portfolio</a>
+    </div>
+    <div class="team-card reveal">
+      <div class="member-image">
+        <img src="sources/images/Team/Sayodya Hasaranga/Sayodya Hasaranga Profile Picture.jpg" alt="Sayodya">
       </div>
       <h3>Sayodya Hasaranga</h3>
-      <p class="role">Co-Founder & Lead Script Writer</p>
-      <p style="font-size: 13px; margin-top: 10px; color: #aaa;">Screenwriting & Creative Support</p>
+      <p class="role">Co-Founder & Lead Writer</p>
     </div>
-
   </div>
 </section>
 
 <section id="productions">
   <h2 class="gold-text reveal">Our Latest Production</h2>
-  
   <div class="featured-work reveal">
     <div class="work-poster">
-      <img src="sources\images\Productions\One Vote\Poster\One Vote Poster.jpg" alt="One Vote Poster" style="width: 100%; height: 100%; object-fit: cover;">
+      <img src="sources/images/Productions/One Vote/Poster/One Vote Poster.jpg" alt="One Vote Poster">
       <div class="status-badge">Coming Soon</div>
     </div>
-
     <div class="work-info">
-      <p style="color: #d4af37; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-top: 0;">Short Film</p>
       <h3>One Vote (එක් ඡන්දයක්)</h3>
-      <p>
-        A young man visits a troubled village where a boy refuses to vote. When their candidate wins by one vote, the boy realizes his choice changed everything.
-      </p>
-
+      <p>When their candidate wins by one vote, a boy realizes his choice changed everything.</p>
       <div class="movie-links">
-        <a href="https://www.imdb.com/title/tt39291629/?bypassRefViewPref=1&ref_=ext_shr_lnk" target="_blank" class="db-link">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDB">
-        </a>
-        <a href="https://www.themoviedb.org/movie/1607639-one-vote" target="_blank" class="db-link">
-          <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d5373a7a.svg" alt="TMDB">
-        </a>
-      </div>
-
-      <div style="margin-top: 25px; font-size: 13px; font-style: italic; color: #d4af37;">
-        — Releasing Soon in 2026 —
+        <a href="https://www.imdb.com/title/tt39291629/" target="_blank" class="db-link"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDB"></a>
+        <a href="https://www.themoviedb.org/movie/1607639-one-vote" target="_blank" class="db-link"><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d5373a7a.svg" alt="TMDB"></a>
       </div>
     </div>
   </div>
@@ -514,15 +233,9 @@
   <div class="contact-container">
     <h2 class="gold-text reveal">Contact the Realm</h2>
     <form action="https://formspree.io/f/hirunhansana2@gmail.com" method="POST" class="reveal">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Email Address" required>
-      </div>
-      <div class="form-group">
-        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      </div>
+      <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+      <div class="form-group"><input type="email" name="email" placeholder="Email Address" required></div>
+      <div class="form-group"><textarea name="message" rows="4" placeholder="Your Message" required></textarea></div>
       <button type="submit" class="btn">Send Message</button>
     </form>
   </div>
@@ -530,23 +243,13 @@
 
 <footer>
   <div class="social-links reveal">
-    <a href="https://facebook.com/tencrowns" target="_blank" title="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://instagram.com/tencrowns" target="_blank" title="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://youtube.com/tencrowns" target="_blank" title="YouTube">
-      <i class="fab fa-youtube"></i>
-    </a>
-    <a href="https://tiktok.com/@tencrowns" target="_blank" title="TikTok">
-      <i class="fab fa-tiktok"></i>
-    </a>
-    <a href="https://wa.me/94718920869" target="_blank" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="https://facebook.com/tencrowns" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/tencrowns" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com/tencrowns" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://tiktok.com/@tencrowns" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://wa.me/94718920869" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
-  <p style="opacity: 0.6; letter-spacing: 2px;">© 2026 TEN CROWNS ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
+  <p>© 2026 TEN CROWNS ENTERTAINMENT. ALL RIGHTS RESERVED.</p>
 </footer>
 
 <script>
@@ -567,5 +270,4 @@
 </script>
 
 </body>
-
 </html>
