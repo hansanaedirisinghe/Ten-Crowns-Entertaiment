@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>TEN CROWNS ENTERTAINMENT | Cinematic Excellence</title>
-  
+
   <link rel="icon" type="image/png" href="sources/images/logo/Ten Crowns Entertainment Logo (Transparent).png">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
+
   <script src="https://unpkg.com/scrollreveal"></script>
 
   <style>
@@ -161,6 +161,7 @@
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1px;
+      z-index: 2;
     }
     .work-info {
       padding: 40px;
@@ -176,6 +177,71 @@
       margin-top: 10px;
       font-size: 14px;
       color: #bbb;
+    }
+
+    /* --- NETFLIX-STYLE CATEGORY & CARDS --- */
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      color: #d4af37;
+      text-align: left;
+    }
+
+    .netflix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .netflix-card {
+      position: relative;
+      background: #0a0a0a;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      cursor: pointer;
+    }
+
+    .netflix-card:hover {
+      transform: scale(1.05);
+      border-color: #d4af37;
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+      z-index: 10;
+    }
+
+    .netflix-card-poster {
+      width: 100%;
+      height: 310px;
+      position: relative;
+    }
+
+    .netflix-card-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .netflix-card-info {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .netflix-card-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .netflix-card-info p {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 5px;
+      line-height: 1.4;
     }
 
     /* --- CONTACT FORM --- */
@@ -358,7 +424,7 @@
 
 <section id="about">
   <h2 class="gold-text reveal">Born From Legend</h2>
-  
+
   <div class="about-content">
     <div class="about-logo reveal">
       <img src="sources/images/logo/Ten Crowns Entertainment Logo (Transparent).png" alt="TEN CROWNS Logo">
@@ -453,6 +519,21 @@
         <a href="https://www.themoviedb.org/movie/1607639-one-vote" target="_blank" class="db-link">
           <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d5373a7a.svg" alt="TMDB">
         </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHORT FILMS CATEGORY (NETFLIX STYLE) -->
+  <h3 class="category-title reveal">Short Films</h3>
+  <div class="netflix-grid reveal">
+    <div class="netflix-card">
+      <div class="netflix-card-poster">
+        <img src="sources\images\Productions\One Vote\Poster\One Vote Poster.jpg" alt="One Vote">
+        <div class="status-badge">Coming Soon</div>
+      </div>
+      <div class="netflix-card-info">
+        <h4>One Vote (එක් ඡන්දයක්)</h4>
+        <p>Short Film • 2026</p>
       </div>
     </div>
   </div>
