@@ -244,6 +244,59 @@
       line-height: 1.4;
     }
 
+    /* --- NEW CARD BUTTONS --- */
+    .card-actions {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .watch-now-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #e50914; /* Netflix Red */
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+    
+    .watch-now-btn:hover {
+      background: #f40612;
+      color: #fff;
+    }
+
+    .card-db-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .db-btn {
+      flex: 1;
+      padding: 8px;
+      background: transparent;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: #d4af37;
+      text-align: center;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .db-btn:hover {
+      background: #d4af37;
+      color: #000;
+    }
+
     /* --- CONTACT FORM --- */
     .contact-container { max-width: 700px; margin: 0 auto; }
     .form-group { margin-bottom: 25px; text-align: left; }
@@ -534,6 +587,16 @@
       <div class="netflix-card-info">
         <h4>One Vote (එක් ඡන්දයක්)</h4>
         <p>Short Film • 2026</p>
+        
+        <!-- NEW WATCH NOW & DB BUTTONS -->
+        <div class="card-actions">
+          <a href="#" target="_blank" class="watch-now-btn"><i class="fas fa-play"></i> Watch Now</a>
+          <div class="card-db-links">
+            <a href="https://www.imdb.com/title/tt39291629/" target="_blank" class="db-btn">IMDb</a>
+            <a href="https://www.themoviedb.org/movie/1607639-one-vote" target="_blank" class="db-btn">TMDb</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
